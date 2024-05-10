@@ -18,17 +18,16 @@ function getFormattedDate() {
 
 router.get('/', (req, res) => {
 
-    //query params o query strings
     const {success, error} = req.query     
     console.log({success, error})
     return res.render('archivos', {success, error})
+    
 })
 
-//crear los archivos
+
 router.post('/crear', async(req, res) => {
     
     try{
-        //req.body
         const {archivo, contenido} = req.body
 
         if(!archivo || !contenido || !archivo.trim() || !contenido.trim() ){
@@ -66,7 +65,6 @@ router.get('/leer', async(req, res) => {
             strict: true 
         })
 
-        //crear una ruta a donde lleguen los archivos creados 
         const ruta = path.join(__dirname, `../data/archivos/${slug}.txt`)
 
         const contenido = await readFile(ruta, 'utf-8')

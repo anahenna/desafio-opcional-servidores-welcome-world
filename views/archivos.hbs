@@ -11,7 +11,7 @@
 </div>
 {{/if}}
 
-<h3 class="mt-4">Crear un archivo</h3> <!-- Agregar mt-5 aquí -->
+<h3 class="mt-4">Crear un archivo</h3> 
 <form action="/archivos/crear" method="POST">
     <div class="form-group">
       Nombre del archivo
@@ -22,17 +22,17 @@
       <textarea name="contenido" class="form-control" id="contenido" cols="30" rows="10"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-2">Crear archivo</button> <!-- Agregar mt-2 aquí -->
+    <button type="submit" class="btn btn-primary mt-2">Crear archivo</button> 
 </form>
 
-<h3 class="mt-4">Leer un archivo</h3> <!-- Agregar mt-5 aquí -->
+<h3 class="mt-4">Leer un archivo</h3> 
 <form action="/archivos/leer" method="GET">
       <div class="form-group">
         Nombre del archivo
         <input name="archivo" class="form-control" id="archivo" />
       </div>
 
-      <button type="submit" class="btn btn-info mt-2">Consultar archivo</button> <!-- Agregar mt-2 aquí -->
+      <button type="submit" class="btn btn-info mt-2">Consultar archivo</button> 
 </form>
 
 <h3 class="mt-4">Renombrar un archivo</h3>
