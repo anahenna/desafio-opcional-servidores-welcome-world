@@ -1,0 +1,60 @@
+<h1>CRUD de Archivos</h1>
+
+{{#if error}}
+<div class="alert alert-danger">
+  {{error}}
+</div>
+{{/if}}
+{{#if success}}
+<div class="alert alert-success">
+  {{success}}
+</div>
+{{/if}}
+
+<h3 class="mt-4">Crear un archivo</h3> <!-- Agregar mt-5 aquí -->
+<form action="/archivos/crear" method="POST">
+    <div class="form-group">
+      Nombre del archivo
+      <input name="archivo" class="form-control" id="archivo" />
+    </div>
+    <div class="form-group">
+      Contenido
+      <textarea name="contenido" class="form-control" id="contenido" cols="30" rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Crear archivo</button> <!-- Agregar mt-2 aquí -->
+</form>
+
+<h3 class="mt-4">Leer un archivo</h3> <!-- Agregar mt-5 aquí -->
+<form action="/archivos/leer" method="GET">
+      <div class="form-group">
+        Nombre del archivo
+        <input name="archivo" class="form-control" id="archivo" />
+      </div>
+
+      <button type="submit" class="btn btn-info mt-2">Consultar archivo</button> <!-- Agregar mt-2 aquí -->
+</form>
+
+<h3 class="mt-4">Renombrar un archivo</h3>
+<form action="/archivos/renombrar" method="POST">
+      <div class="form-group">
+        Nombre del archivo
+        <input name="archivo" class="form-control" id="archivo" />
+      </div>
+      <div class="form-group">
+        Nuevo nombre del archivo
+        <input name="nuevoNombre" class="form-control" id="archivo" />
+      </div>
+
+      <button type="submit" class="btn btn-warning mt-2">Renombrar archivo</button>
+</form>
+
+<h3 class="mt-4">Eliminar un archivo</h3>
+    <form action="/archivos/eliminar" method="POST">
+      <div class="form-group">
+        Nombre del archivo
+        <input name="archivo" class="form-control" id="archivo" />
+      </div>
+
+      <button type="submit" class="btn btn-danger mt-2">Eliminar archivo</button>
+    </form>

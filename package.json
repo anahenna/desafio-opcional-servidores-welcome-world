@@ -1,0 +1,24 @@
+{
+  "name": "desafio-opcional",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "node": "^20.13.0",
+    "nodemon": "^3.1.0"
+  },
+  "description": ""
+}
